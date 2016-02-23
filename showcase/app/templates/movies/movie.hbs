@@ -1,0 +1,7 @@
+{{#each model.errors.messages as |message|}}
+  <div class="error">
+    {{message}}
+  </div>
+{{/each}}
+{{#movie-detail movie=model previous='previous' next='next' save='save' delete='delete' isEditing=false}}
+{{/movie-detail}}

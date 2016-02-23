@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 panel panel-default panel-heading nav-brand">
+        Welcome to showcase.<span class="muted">The home for top rated movies.</span>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 panel panel-primary panel-heading" style="position:relative; height:600px;">
+      <div class="col-xs-12 home-bg"></div>
+        {{#each (random-models-in model) as |model|}}
+          <div class="col-xs-2 list-group-item poster" style={{model.style}}>
+            <img src="{{model.poster}}" class="img-responsive pointer" {{action "open" model.id model.position}}>
+          </div>
+        {{else}}
+          <div class="col-xs-9">
+            <img src="assets/img/logo-02.jpg" class="img-responsive">
+          </div>
+        {{/each}}
+    </div>
+  </div>
+</div>
+{{outlet}}

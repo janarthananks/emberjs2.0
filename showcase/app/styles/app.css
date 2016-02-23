@@ -1,0 +1,128 @@
+.poster {
+ -khtml-opacity:.50;
+ -moz-opacity:.50;
+ -ms-filter:"alpha(opacity=50)";
+  filter:alpha(opacity=50);
+  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0.5);
+  opacity:.50;
+  position:absolute;
+}
+
+.home-bg {
+  -khtml-opacity:.10;
+  -moz-opacity:.10;
+  -ms-filter:"alpha(opacity=10)";
+   filter:alpha(opacity=10);
+   filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0.1);
+   opacity:.10;
+   position:absolute;
+   background-position:center;
+   background-image: url('img/logo-02.jpg');
+   background-repeat:no-repeat;
+   height:100%;
+}
+
+.pointer {
+  cursor: pointer
+}
+
+.input-group-addon {
+  min-width: 100px;
+  text-align: left;
+}
+
+.navigate-image-prev, .navigate-image-next {
+  width: 25px;
+  height: 45px;
+  position: absolute;
+  top:0px;
+  background-image: url('img/navigation-01.png');
+  background-repeat: no-repeat;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.navigate-image-prev {
+  left: -16px;
+  background-position: -182px -90px;
+}
+
+.navigate-image-next {
+  right: 0px;
+  background-position: -241px -90px;
+}
+
+.navigate-image-prev:hover {
+  background-position: -182px 0px;
+}
+
+.navigate-image-next:hover {
+  background-position: -241px 0px;
+}
+
+.navigate-image-movie-prev, .navigate-image-movie-next {
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  top:-57px;
+  background-image: url('img/navigation-02.png');
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.navigate-image-movie-prev {
+  left: 256px;
+  background-position: -160px -64px;
+}
+
+.navigate-image-movie-next {
+  right: 256px;
+  background-position: -64px -64px;
+}
+
+.navigate-image-movie-prev:hover {
+  background-position: -160px -96px;
+}
+
+.navigate-image-movie-next:hover {
+  background-position: -64px -96px;
+}
+
+.movie-search-group {
+  z-index:1001;
+  top:-63px;
+  right: 30px;
+  position: absolute;
+}
+
+.movie-search-cursor {
+  cursor:pointer;
+}
+
+.movie-search-filter {
+  height: 34px;
+  top: 0px;
+  position: absolute !important;
+  width: 101px !important;
+  left: 0px;
+  border-top-left-radius: 4px !important;
+  border-bottom-left-radius: 4px !important;
+}
+
+.movie-search-clear {
+  color: rgba(0,0,0,.25);
+  position: absolute;
+  z-index: 1002;
+  top: 5px;
+  right: 103px;
+  font-size: x-large;
+  cursor: pointer;
+}
+
+.movie-search-display {
+  display:block;
+}
+
+.movie-search-hide {
+  display:none;
+}

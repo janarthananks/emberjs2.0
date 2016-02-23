@@ -1,0 +1,41 @@
+<div class="container">
+  <div class="col-xs-12 list-group">
+    {{movies-search search='search'}}
+  </div>
+  <div class="col-xs-12 list-group">
+    <div class="col-xs-4 list-group">
+        <div class="navigate-image-prev" {{action "previousPage"}}></div>
+        <div class="col-xs-12">
+          {{#each model as |movie|}}
+            {{#unless movie.isNew}}
+              {{#link-to "movies.movie" movie class="list-group-item"}}
+                <div class="row">
+                  <div class="col-xs-12">
+                    {{{movie.title}}}&nbsp;({{movie.releaseYear}})
+                 	</div>
+                </div>
+              {{/link-to}}
+            {{/unless}}
+          {{else}}
+            <div class="list-group-item list-group-item-warning">
+              <div class="row">
+                <div class="col-xs-12">
+                  No movies here!
+                </div>
+              </div>
+            </div>
+          {{/each}}
+          <!-- <div class="col-xs-12 shelf"></div> -->
+        </div>
+        <div class="navigate-image-next" {{action "nextPage"}}></div>
+      </div>
+      <div class="col-xs-8">
+        <div class="col-xs-12 panel panel-primary panel-heading">
+          {{#link-to "movies.new"}}
+            <div class="glyphicon glyphicon-plus"></div>
+          {{/link-to}}
+        </div>
+        {{outlet}}
+      </div>
+  </div>
+</div>

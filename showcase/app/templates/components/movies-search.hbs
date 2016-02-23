@@ -1,0 +1,12 @@
+<span class="input-group-addon">
+  <select class="movie-search-filter form-control" onchange={{action "selectFilter" value="target.value"}}>
+    {{#each filters as |choice|}}
+      <option value={{choice}} selected={{eq choice filter}}>{{choice}}</option>
+    {{/each}}
+  </select>
+</span>
+{{input class="form-control" placeholder="Enter keyword to search" value=keyword}}
+<span class="glyphicon glyphicon-remove-sign movie-search-clear {{if isClear "movie-search-hide"}} {{unless isClear "movie-search-display"}}" {{action 'clearSearch'}}></span>
+<span class="input-group-addon  movie-search-cursor"  {{action 'search' keyword}}>
+  <span class="glyphicon glyphicon-search"></span>
+</span>
