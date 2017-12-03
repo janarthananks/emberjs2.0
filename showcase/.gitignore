@@ -15,3 +15,6 @@
 /libpeerconnection.log
 npm-debug.log
 testem.log
+showcase.code-workspace
+package-lock.json
+.DS_Store
