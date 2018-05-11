@@ -10,5 +10,4 @@ export function uniqueRandomNumber(randomNumbers, limit, floor/*, hash*/) {
     }
     return uniqueRandomNumber(randomNumbers, limit, floor);
 }
-
 export default Ember.Helper.helper(uniqueRandomNumber);
